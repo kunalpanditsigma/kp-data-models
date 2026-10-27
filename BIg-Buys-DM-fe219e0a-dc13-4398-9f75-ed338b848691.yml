@@ -1,0 +1,284 @@
+dataModelId: fe219e0a-dc13-4398-9f75-ed338b848691
+name: BIg Buys DM
+url: https://staging.sigmacomputing.io/papercranestaging/data-model/BIg-Buys-DM-7JxpGi7DG4IMEyg3oo1wEF
+documentVersion: 6
+latestDocumentVersion: 6
+ownerId: xoSG3uqjIe8562MsNs9kktFDZIiXV
+folderId: 23ac023c-9310-442a-ba01-15e42ff9559d
+createdBy: xoSG3uqjIe8562MsNs9kktFDZIiXV
+updatedBy: xoSG3uqjIe8562MsNs9kktFDZIiXV
+createdAt: '2026-05-13T17:15:46.456Z'
+updatedAt: '2026-10-23T16:26:26.768Z'
+schemaVersion: 1
+pages:
+  - id: JVNSGt7l1t
+    name: Page 1
+    elements:
+      - kind: control
+        controlId: Eval
+        id: '-VmAt5kGb5con'
+        filters:
+          - source:
+              kind: table
+              elementId: x88VfaA45W
+            columnId: eWDmYEua3o
+          - source:
+              kind: table
+              elementId: Et6bdd1KnJ
+            columnId: eWDmYEua3o
+        controlType: list
+        mode: exclude
+        selectionMode: multiple
+        values:
+          - null
+        source:
+          kind: source
+          source:
+            kind: table
+            elementId: x88VfaA45W
+          columnId: eWDmYEua3o
+      - id: x88VfaA45W
+        kind: table
+        source:
+          kind: join
+          joins: []
+          primarySource:
+            connectionId: a9d45cfe-ff65-4515-8193-a7072602a1ee
+            kind: warehouse-table
+            path:
+              - SE_DEMO_DB
+              - BIG_BUYS
+              - BIG_BUYS_POS
+        columns:
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/ORDER_NUMBER
+            formula: '[BIG_BUYS_POS/Order Number]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/DATE
+            formula: '[BIG_BUYS_POS/Date]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_KEY
+            formula: '[BIG_BUYS_POS/Product Key]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/SKU_NUMBER
+            formula: '[BIG_BUYS_POS/Sku Number]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/QUANTITY
+            formula: '[BIG_BUYS_POS/Quantity]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/COST
+            formula: '[BIG_BUYS_POS/Cost]'
+            format:
+              kind: number
+              formatString: $,.2f
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRICE
+            formula: '[BIG_BUYS_POS/Price]'
+            format:
+              kind: number
+              formatString: $,.2f
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_REGION
+            formula: '[BIG_BUYS_POS/Store Region]'
+          - id: 6jHuCDDiQi
+            formula: CurrentUserAttributeText("KP")
+            name: User Attribute
+          - id: eWDmYEua3o
+            formula: '[User Attribute] = [Store Region]'
+            name: Eval
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_TYPE
+            formula: '[BIG_BUYS_POS/Product Type]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_FAMILY
+            formula: '[BIG_BUYS_POS/Product Family]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_LINE
+            formula: '[BIG_BUYS_POS/Product Line]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/BRAND
+            formula: '[BIG_BUYS_POS/Brand]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_NAME
+            formula: '[BIG_BUYS_POS/Product Name]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_TIER
+            formula: '[BIG_BUYS_POS/Product Tier]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/MERCHANT_ID
+            formula: '[BIG_BUYS_POS/Merchant Id]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_NAME
+            formula: '[BIG_BUYS_POS/Store Name]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_KEY
+            formula: '[BIG_BUYS_POS/Store Key]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_TIER
+            formula: '[BIG_BUYS_POS/Store Tier]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_TIER_ORDER
+            formula: '[BIG_BUYS_POS/Store Tier Order]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_STATE
+            formula: '[BIG_BUYS_POS/Store State]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_CITY
+            formula: '[BIG_BUYS_POS/Store City]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_ZIP_CODE
+            formula: '[BIG_BUYS_POS/Store Zip Code]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_LATITUDE
+            formula: '[BIG_BUYS_POS/Store Latitude]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_LONGITUDE
+            formula: '[BIG_BUYS_POS/Store Longitude]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/COUNTY_NAME
+            formula: '[BIG_BUYS_POS/County Name]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/ZIP_POPULATION
+            formula: '[BIG_BUYS_POS/Zip Population]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/CUST_KEY
+            formula: '[BIG_BUYS_POS/Cust Key]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/CUSTOMER_NAME
+            formula: '[BIG_BUYS_POS/Customer Name]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/CUST_JSON
+            formula: '[BIG_BUYS_POS/Cust Json]'
+          - id: DyDmF7J-og
+            formula: '[Missing node/inode-4oaI2we1tktrsjPGK0u0GS\/PRODUCT_LINE]'
+        metrics:
+          - id: b0H62sPo2C
+            formula: SumIf([Quantity], [Store Region] = "West")
+            name: West Quantity
+        order:
+          - inode-4oaI2we1tktrsjPGK0u0GS/ORDER_NUMBER
+          - inode-4oaI2we1tktrsjPGK0u0GS/DATE
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_KEY
+          - inode-4oaI2we1tktrsjPGK0u0GS/SKU_NUMBER
+          - inode-4oaI2we1tktrsjPGK0u0GS/QUANTITY
+          - inode-4oaI2we1tktrsjPGK0u0GS/COST
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRICE
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_REGION
+          - 6jHuCDDiQi
+          - eWDmYEua3o
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_TYPE
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_FAMILY
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_LINE
+          - inode-4oaI2we1tktrsjPGK0u0GS/BRAND
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_NAME
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_TIER
+          - inode-4oaI2we1tktrsjPGK0u0GS/MERCHANT_ID
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_NAME
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_KEY
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_TIER
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_TIER_ORDER
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_STATE
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_CITY
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_ZIP_CODE
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_LATITUDE
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_LONGITUDE
+          - inode-4oaI2we1tktrsjPGK0u0GS/COUNTY_NAME
+          - inode-4oaI2we1tktrsjPGK0u0GS/ZIP_POPULATION
+          - inode-4oaI2we1tktrsjPGK0u0GS/CUST_KEY
+          - inode-4oaI2we1tktrsjPGK0u0GS/CUSTOMER_NAME
+          - inode-4oaI2we1tktrsjPGK0u0GS/CUST_JSON
+          - DyDmF7J-og
+      - id: Et6bdd1KnJ
+        kind: table
+        source:
+          kind: join
+          joins: []
+          primarySource:
+            connectionId: a9d45cfe-ff65-4515-8193-a7072602a1ee
+            kind: warehouse-table
+            path:
+              - SE_DEMO_DB
+              - BIG_BUYS
+              - BIG_BUYS_POS
+        columns:
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/ORDER_NUMBER
+            formula: '[BIG_BUYS_POS/Order Number]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/DATE
+            formula: '[BIG_BUYS_POS/Date]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_KEY
+            formula: '[BIG_BUYS_POS/Product Key]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/SKU_NUMBER
+            formula: '[BIG_BUYS_POS/Sku Number]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/QUANTITY
+            formula: '[BIG_BUYS_POS/Quantity]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/COST
+            formula: '[BIG_BUYS_POS/Cost]'
+            format:
+              kind: number
+              formatString: $,.2f
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRICE
+            formula: '[BIG_BUYS_POS/Price]'
+            format:
+              kind: number
+              formatString: $,.2f
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_REGION
+            formula: '[BIG_BUYS_POS/Store Region]'
+          - id: 6jHuCDDiQi
+            formula: CurrentUserAttributeText("KP")
+            name: User Attribute
+          - id: eWDmYEua3o
+            formula: '[User Attribute] = [Store Region]'
+            name: Eval
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_TYPE
+            formula: '[BIG_BUYS_POS/Product Type]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_FAMILY
+            formula: '[BIG_BUYS_POS/Product Family]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_LINE
+            formula: '[BIG_BUYS_POS/Product Line]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/BRAND
+            formula: '[BIG_BUYS_POS/Brand]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_NAME
+            formula: '[BIG_BUYS_POS/Product Name]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_TIER
+            formula: '[BIG_BUYS_POS/Product Tier]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/MERCHANT_ID
+            formula: '[BIG_BUYS_POS/Merchant Id]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_NAME
+            formula: '[BIG_BUYS_POS/Store Name]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_KEY
+            formula: '[BIG_BUYS_POS/Store Key]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_TIER
+            formula: '[BIG_BUYS_POS/Store Tier]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_TIER_ORDER
+            formula: '[BIG_BUYS_POS/Store Tier Order]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_STATE
+            formula: '[BIG_BUYS_POS/Store State]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_CITY
+            formula: '[BIG_BUYS_POS/Store City]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_ZIP_CODE
+            formula: '[BIG_BUYS_POS/Store Zip Code]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_LATITUDE
+            formula: '[BIG_BUYS_POS/Store Latitude]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/STORE_LONGITUDE
+            formula: '[BIG_BUYS_POS/Store Longitude]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/COUNTY_NAME
+            formula: '[BIG_BUYS_POS/County Name]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/ZIP_POPULATION
+            formula: '[BIG_BUYS_POS/Zip Population]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/CUST_KEY
+            formula: '[BIG_BUYS_POS/Cust Key]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/CUSTOMER_NAME
+            formula: '[BIG_BUYS_POS/Customer Name]'
+          - id: inode-4oaI2we1tktrsjPGK0u0GS/CUST_JSON
+            formula: '[BIG_BUYS_POS/Cust Json]'
+          - id: DyDmF7J-og
+            formula: '[Missing node/inode-4oaI2we1tktrsjPGK0u0GS\/PRODUCT_LINE]'
+        metrics:
+          - id: b0H62sPo2C
+            formula: SumIf([Quantity], [Store Region] = "West")
+            name: West Quantity
+        order:
+          - inode-4oaI2we1tktrsjPGK0u0GS/ORDER_NUMBER
+          - inode-4oaI2we1tktrsjPGK0u0GS/DATE
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_KEY
+          - inode-4oaI2we1tktrsjPGK0u0GS/SKU_NUMBER
+          - inode-4oaI2we1tktrsjPGK0u0GS/QUANTITY
+          - inode-4oaI2we1tktrsjPGK0u0GS/COST
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRICE
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_REGION
+          - 6jHuCDDiQi
+          - eWDmYEua3o
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_TYPE
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_FAMILY
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_LINE
+          - inode-4oaI2we1tktrsjPGK0u0GS/BRAND
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_NAME
+          - inode-4oaI2we1tktrsjPGK0u0GS/PRODUCT_TIER
+          - inode-4oaI2we1tktrsjPGK0u0GS/MERCHANT_ID
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_NAME
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_KEY
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_TIER
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_TIER_ORDER
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_STATE
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_CITY
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_ZIP_CODE
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_LATITUDE
+          - inode-4oaI2we1tktrsjPGK0u0GS/STORE_LONGITUDE
+          - inode-4oaI2we1tktrsjPGK0u0GS/COUNTY_NAME
+          - inode-4oaI2we1tktrsjPGK0u0GS/ZIP_POPULATION
+          - inode-4oaI2we1tktrsjPGK0u0GS/CUST_KEY
+          - inode-4oaI2we1tktrsjPGK0u0GS/CUSTOMER_NAME
+          - inode-4oaI2we1tktrsjPGK0u0GS/CUST_JSON
+          - DyDmF7J-og
+kind: data-model
